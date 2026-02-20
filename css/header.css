@@ -1,0 +1,221 @@
+﻿.sabad {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+    background-color: blue;
+    height: 17px;
+    width: 17px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    align-items: center;
+}
+
+.pd-top20 {
+    padding-top: 20px;
+}
+
+.pd-top3 {
+    padding-top: 0px;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
+.cyan {
+    color: cyan;
+}
+
+.header-row2 {
+    height: 80px;
+    align-items: center;
+    display: flex;
+}
+
+.header-image {
+    height: 80px;
+    width: 80px;
+}
+
+.header-title {
+    justify-content: center;
+}
+
+/*Desctop*/
+@media(min-width:768px) {
+    .search-box {
+        width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .visibl {
+        visibility: visible;
+    }
+
+    .f20 {
+        font-size: 20px;
+    }
+}
+
+/*Phone*/
+@media(max-width:768px) {
+    .search-box {
+        width: 240px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .visibl {
+        visibility: hidden;
+        display: none;
+    }
+
+    .f20 {
+        font-size: 15px;
+    }
+}
+
+#search-results {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 100;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.search-item:hover {
+    background: #f1f1f1;
+}
+
+.search-item img {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+mark {
+    background: #ffe58a;
+    padding: 0;
+}
+
+/*Menu*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* جلوگیری از اسکرول افقی موقع باز شدن منو */
+}
+
+/* منوی کناری */
+.form_wrapper {
+    position: fixed;
+    right: -250px;
+    /* اول بیرون از صفحه باشه */
+    width: 250px;
+    height: 100%;
+    background: #f9f9f9;
+    border-left: 1px solid #ccc;
+    box-shadow: -3px 0 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+    z-index: 1000;
+    direction: rtl;
+}
+
+.form_wrapper.show {
+    right: 0;
+    /* بیاد داخل صفحه */
+}
+
+.form_wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form_wrapper ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.form_wrapper ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+}
+
+.form_wrapper ul li:last-child {
+    border: none;
+}
+
+/* لایه تاریک پشت منو */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#suggestions {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#suggestions .list-group-item {
+    cursor: pointer;
+}
+
+#suggestions .highlight {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#suggestions .active {
+    background-color: #007bff;
+    color: white;
+}
+
+.close-menu {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    float: left;
+}

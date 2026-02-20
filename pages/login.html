@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>خانه موبایل | ورود</title>
+  <link rel="icon" href="../images/header/logo.jpg">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+  <div class="card">
+    <form id="loginForm" novalidate>
+      <h2>ورود کاربر</h2>
+      <br>
+      <input id="username" name="username" placeholder="نام کاربری خود را وارد کنید">
+      <small class="error-text" id="userError"></small>
+      <input id="password" name="password" type="password" placeholder="رمز عبور">
+      <small class="error-text" id="passError"></small>
+      <button type="submit" class="btn">ورود</button>
+    </form>
+    <div class="msg success" id="successBox">✅ ورود موفق! خوش آمدید 🌸</div>
+    <div class="msg error" id="errorBox">❌ اطلاعات واردشده نادرست است.</div>
+    <div class="link">
+      <a href="sign-up.html">ثبت‌ نام حساب جدید</a>
+    </div>
+  </div>
+  <script>
+    const form = document.getElementById('loginForm');
+
+    const successBox = document.getElementById('successBox');
+    const errorBox = document.getElementById('errorBox');
+
+    const userError = document.getElementById('userError');
+    const passError = document.getElementById('passError');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // پاک کردن پیام‌ها
+      successBox.style.display = 'none';
+      errorBox.style.display = 'none';
+      userError.style.display = 'none';
+      passError.style.display = 'none';
+
+      const username = form.username.value.trim();
+      const password = form.password.value.trim();
+
+      let hasError = false;
+
+      // اعتبارسنجی نام کاربری
+      if (username === "") {
+        userError.style.display = "block";
+        userError.textContent = "نام کاربری نباید خالی باشد.";
+        hasError = true;
+      }
+
+      // اعتبارسنجی رمز عبور
+      if (password === "") {
+        passError.style.display = "block";
+        passError.textContent = "رمز عبور نباید خالی باشد.";
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      // گرفتن اطلاعات از لوکال استوریج
+      const userData = JSON.parse(localStorage.getItem('userData'));
+
+      if (!userData) {
+        errorBox.style.display = 'block';
+        errorBox.textContent = '❌ هیچ حسابی ثبت نشده است!';
+        return;
+      }
+
+      // مقایسه اطلاعات
+      if (username === userData.username && password === userData.password) {
+        successBox.style.display = 'block';
+        successBox.textContent = `✅ ورود موفق! خوش آمدید ${userData.fullname} 🌸`;
+
+        setTimeout(() => {
+          window.location.href = "../index.html";
+        }, 1500);
+      } else {
+        errorBox.style.display = 'block';
+        errorBox.textContent = "❌ اطلاعات واردشده نادرست است.";
+      }
+    });
+
+  </script>
+</body>
+
+</html>
