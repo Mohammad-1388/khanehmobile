@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خانه موبایل | ورود مدیر</title>
+  <link rel="icon" href="../images/header/logo.jpg">
+  <style>
+    @font-face {
+      font-family: "Vazir";
+      src: url(../fonts/Vazir.eot) format("embedded-opentype"), url(../fonts/Vazir.woff) format("woff"), url(../fonts/Vazir.ttf) format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: "Vazir";
+      background-color: rgb(84, 75, 75);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-top: 12.5%;
+    }
+
+    .login-box {
+      background-color: lightgray;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      height: 30px;
+      width: 250px;
+      margin-bottom: 15px;
+      background-color: ghostwhite;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      height: 30px;
+      width: 250px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <h2>ورود مدیر</h2>
+    <input type="text" id="username" placeholder="نام کاربری">
+    <input type="password" id="password" placeholder="رمز عبور">
+    <button onclick="login()">ورود</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const error = document.getElementById("errorMsg");
+
+      if (user === "admin" && pass === "1234") {
+        // ساخت توکن ورود
+        localStorage.setItem("adminLoggedIn", "true");
+        window.location.href = "admin.html";
+      } else {
+        error.textContent = "❌ نام کاربری یا رمز اشتباه است";
+      }
+    }
+  </script>
+</body>
+
+</html>

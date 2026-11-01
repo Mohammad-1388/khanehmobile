@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خانه موبایل | ادمین</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="icon" href="../images/header/logo.jpg">
+    <style>
+        @font-face {
+            font-family: "Vazir";
+            src: url(../fonts/Vazir.eot) format("embedded-opentype"), url(../fonts/Vazir.woff) format("woff"), url(../fonts/Vazir.ttf) format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Vazir";
+            background-color: lightgray;
+        }
+
+        .cenetr {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .box {
+            width: 1000px;
+            height: 50px;
+            background-color: ghostwhite;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container cenetr" style="margin-top: 12.5%;">
+        <div class="row">
+            <button class="btn btn-info" id="logoutBtn">خروج از حساب</button>
+            <br>
+            <br>
+            <div class="box cenetr">
+                <div class="col-lg-6">
+                    <a href="./list.html">لیست شکایت‌ها</a>
+                </div>
+                <div class="col-lg-6">
+                    <a href="./users.html">مدیریت کاربران</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (localStorage.getItem("adminLoggedIn") !== "true") {
+            alert("🚫 دسترسی غیرمجاز! لطفاً وارد شوید.");
+            window.location.href = "login2.html";
+        }
+        const logoutBtn = document.getElementById("logoutBtn");
+        logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem("adminLoggedIn");
+            alert("✅ از حساب خارج شدید.");
+            window.location.href = "login2.html";
+        });
+    </script>
+</body>
+
+</html>

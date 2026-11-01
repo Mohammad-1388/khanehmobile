@@ -1,0 +1,523 @@
+﻿@font-face {
+  font-family: "Vazir";
+  src: url(../fonts/Vazir.eot) format("embedded-opentype"), url(../fonts/Vazir.woff) format("woff"), url(../fonts/Vazir.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: "Vazir";
+    font-size: 14px;
+    line-height: 18px;
+    color: #444;
+    background-color: #eeeff1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.float-left {
+    float: left !important;
+}
+
+
+
+.child-page {
+    padding-top: 100px;
+}
+
+.direction-ltr {
+    direction: rtl;
+}
+
+
+
+
+
+
+
+
+
+h1, h2, h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h4, h5, h6{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: #929782;
+}
+
+a:hover {
+    color: #5bc0de;
+}
+
+.btn,
+a,
+a:hover,
+div,
+img {
+    text-decoration: none;
+}
+
+
+
+
+
+.container-2 {
+    background-color: #f7f8fa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-other {
+    direction: rtl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    
+
+    .navbar-other {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    .child-page {
+        /*padding-top: 65px;*/
+        padding-top: 97px;
+    }
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*search*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*products*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*classified*/
+
+
+
+
+
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background-color: #333;
+    border-color: #333;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    color: #333;
+}
+
+/*classified*/
+
+
+/*inside page*/
+
+
+
+
+
+
+
+
+
+
+input[type=radio],
+input[type=checkbox] {
+    margin: 2px 0 0;
+}
+
+/*inside page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright {
+    background-color: #111;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+.copyright a {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Login modal*/
+
+
+
+
+@media (max-width: 1200px) {
+
+    
+
+    
+
+    
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    .cover-button-bottom-for-andoid {
+        padding-bottom: 65px;
+    }
+
+    
+}
+
+
+
+@media (max-width: 340px) {
+    
+
+    
+
+    
+
+    .navbar-other img {
+        width: 120px;
+        padding-top: 5px;
+    }
+
+    
+
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    
+
+    
+
+    
+
+    
+
+    section {
+        padding-top: 50px;
+        margin-bottom: -40px;
+    }
+}
+
+
+
+
+
+
+
+
+section {
+    padding-top: 40px;
+    margin-bottom: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Auto Height */
+
+
+
+
+/* a11y */
+
+
+/* IE10 Windows Phone 8 Fixes */
+
+
+
+
+/* Arrows */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pagination Styles */
+
+
+
+
+/* Common Styles */
+
+
+/* Bullets */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Progress */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3D Container */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cube + Flip */
+
+
+
+
+
+
+
+
+
+
+/* Cube */
+
+
+
+
+
+
+
+
+/* Fade */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scrollbar */
+
+
+
+
+
+
+
+
+
+
+/* Preloader */
+
+
+
+
+
+
+@-webkit-keyframes swiper-preloader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
